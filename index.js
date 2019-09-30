@@ -11,5 +11,5 @@ req.query({
 
 req.headers({
     'x-rapidapi-host': 'therundown-therundown-v1.p.rapidapi.com',
-
+    'x-rapidapi-key': ``,
 });
