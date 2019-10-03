@@ -6,8 +6,8 @@ const pull = async () => {
     const data = await axios.get(`https://${process.env.API_HOST}/sports/2/events/2019-09-29`, {
         query: {
             'include': [
+                'scores',
                 'all_periods',
-                'scores'
             ],
             'offset': '0',
         },
@@ -23,18 +23,18 @@ const pull = async () => {
         * data.events[index].score.score_away
         * data.events[index].score.score_home
         */
-    // const games = [];
-    // for(let i = 0; i < data.data.events.length; i++) {
-    //     games.push({
-    //         team_away: data.data.events[i].teams_normalized[0].abbreviation,
-    //         team_home: data.data.events[i].teams_normalized[1].abbreviation,
-    //         // score_away: data.data.events[i].score.score_away,
-    //         // score_home: data.data.events[i].score.score_home,
-    //         score: data.data.events[i].score,
-    //     });
-    // }
-    // return games;
-    return data.data.events;
+    const games = [];
+    for(let i = 0; i < data.data.events.length; i++) {
+        games.push({
+            team_away: data.data.events[i].teams_normalized[0].abbreviation,
+            team_home: data.data.events[i].teams_normalized[1].abbreviation,
+            // score_away: data.data.events[i].score.score_away,
+            // score_home: data.data.events[i].score.score_home,
+            score: data.data.events[i].score,
+        });
+    }
+    return games;
+    //return data.data.events;
 }
 
 pull().then((data) => console.log(data));
