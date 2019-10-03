@@ -6,7 +6,7 @@ const pull = async () => {
     const data = await axios.get(`https://${process.env.API_HOST}/events/04c5cb09dd60999e24b487b6c3d693f7`, {
         query: {
             'include': [
-                'scores',
+                'score',
                 'all_periods',
             ],
         },

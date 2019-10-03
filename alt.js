@@ -16,7 +16,7 @@ axios({
     }
     })
     .then((response)=>{
-      console.log(response.data.events)
+      console.log(response.data)
     })
     .catch((error)=>{
       console.log(error)
