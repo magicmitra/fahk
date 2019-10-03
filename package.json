@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "alt": "node alt.js"
+    "alt": "node alt.js",
+    "alt2": "node alt2.js"
   },
   "keywords": [],
   "author": "",
