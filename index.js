@@ -30,7 +30,7 @@ const pull = async () => {
     //         team_home: data.data.events[i].teams_normalized[1].abbreviation,
     //         // score_away: data.data.events[i].score.score_away,
     //         // score_home: data.data.events[i].score.score_home,
-    //         score_temp: data.data.events[i].score,
+    //         score: data.data.events[i].score,
     //     });
     // }
     // return games;
