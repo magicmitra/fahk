@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '/.env') });
 
 const pull = async () => {
-    const data = await axios.get(`https://${process.env.API_HOST}/sports/2/events/2019-09-29`, {
+    const data = await axios.get(`https://${process.env.API_HOST}/sports/2/events/2019-09-29?include=scores`, {
         query: {
             'include': [
                 'scores',
